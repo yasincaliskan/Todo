@@ -10,8 +10,8 @@ using TodoList.Models;
 namespace TodoList.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20200704194116_thirdMigration")]
-    partial class thirdMigration
+    [Migration("20200706183422_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
