@@ -26,6 +26,7 @@ namespace TodoList.Controllers
         public IActionResult GetList()
         {
             var todos = _context.Todos.AsNoTracking().ToList();
+
             return Ok(todos);
         }
 
@@ -33,15 +34,13 @@ namespace TodoList.Controllers
         public IActionResult GetTodo(int id)
         {
             var todo = _context.Todos.Find(id);
+
             return Ok(todo);
         }
 
         [HttpPost]
         public IActionResult Create(Todo todo)
         {
-            //var user = _context.Users.Where(c => c.ID == todo.UserID).FirstOrDefault();
-            //user.TodoList.Add(todo);
-
             var user = _context.Users.Find(todo.UserID);
             todo.User = user;
 
