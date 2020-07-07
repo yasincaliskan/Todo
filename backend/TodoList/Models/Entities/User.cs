@@ -12,5 +12,10 @@ namespace TodoList.Entities
         public int ID { get; set; }
         public string Name { get; set; }
         public ICollection<Todo> TodoList { get; set; }
+
+        public User()
+        {
+            TodoList = new List<Todo>();
+        }
     }
 }
