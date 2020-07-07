@@ -21,12 +21,28 @@ namespace TodoList.Controllers
         {
             _repository = repository;
         }
-        [HttpGet]
-        public IActionResult GetList()
+
+        [HttpGet("all")]
+        public IActionResult GetAll()
         {
             var todoList = _repository.GetList();
             return Ok(todoList);
         }
+
+        [HttpGet("completed")]
+        public IActionResult GetCompleted()
+        {
+            var todoList = _repository.GetFiltered(true);
+            return Ok(todoList);
+        }
+
+        [HttpGet]
+        public IActionResult GetUncompleted()
+        {
+            var todoList = _repository.GetFiltered(false);
+            return Ok(todoList);
+        }
+
 
         [HttpGet("{id}")]
         public IActionResult GetTodo(int id)
@@ -40,6 +56,13 @@ namespace TodoList.Controllers
         public IActionResult Create(Todo todo)
         {
             return Ok(_repository.Create(todo));
+        }
+
+        [HttpGet("/mark-done/{id}")]
+        public IActionResult Complete(int id)
+        {
+            _repository.MarkDone(id);
+            return Ok();
         }
     }
 }

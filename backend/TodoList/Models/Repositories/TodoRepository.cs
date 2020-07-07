@@ -18,6 +18,12 @@ namespace TodoList.Models.Repositories
             return _context.Todos.ToList();
         }
 
+        public List<Todo> GetFiltered(bool status)
+        {
+            return _context.Todos.Where(c => c.IsDone == status).ToList();
+        }
+
+        
         public Todo GetOne(int id)
         {
             return _context.Todos.Find(id);
@@ -34,6 +40,13 @@ namespace TodoList.Models.Repositories
             _context.SaveChanges();
 
             return todo;
+        }
+
+        public void MarkDone(int id)
+        {
+            var todo = _context.Todos.Find(id);
+            todo.IsDone = true;
+
         }
     }
 }
