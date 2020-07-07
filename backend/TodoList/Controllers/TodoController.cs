@@ -52,17 +52,28 @@ namespace TodoList.Controllers
             return Ok(todo);
         }
 
+        [HttpGet("/mark-done/{id}")]
+        public IActionResult Complete(int id)
+        {
+            _repository.MarkDone(id);
+            return Ok();
+        }
+
         [HttpPost]
         public IActionResult Create(Todo todo)
         {
             return Ok(_repository.Create(todo));
         }
 
-        [HttpGet("/mark-done/{id}")]
-        public IActionResult Complete(int id)
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Todo todo)
         {
-            _repository.MarkDone(id);
-            return Ok();
+            if (id != todo.ID)
+            {
+                return BadRequest();
+            }
+
+            return Ok(_repository.Update(todo));
         }
     }
 }

@@ -42,6 +42,21 @@ namespace TodoList.Models.Repositories
             return todo;
         }
 
+        public Todo Update(Todo todo)
+        {
+            var updatedTodo = _context.Todos.Find(todo);
+
+            updatedTodo.ID = todo.ID;
+            updatedTodo.Title = todo.Title;
+            updatedTodo.Description = todo.Description;
+            updatedTodo.IsDone = todo.IsDone;
+            updatedTodo.UserID = todo.UserID;
+            updatedTodo.User = todo.User;
+
+            _context.SaveChanges();                       
+            return updatedTodo;
+        }
+
         public void MarkDone(int id)
         {
             var todo = _context.Todos.Find(id);

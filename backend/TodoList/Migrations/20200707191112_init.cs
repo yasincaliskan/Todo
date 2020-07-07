@@ -30,6 +30,7 @@ namespace TodoList.Migrations
                     CreatedTime = table.Column<DateTime>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
+                    IsDone = table.Column<bool>(nullable: false),
                     UserID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

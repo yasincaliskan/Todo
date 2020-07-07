@@ -38,15 +38,15 @@ namespace TodoList.Controllers
             return user;
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public IActionResult RegisterUser(User user)
         {
-            _repository.Register(user);
+            var newUser = _repository.Register(user);
 
-            return Ok();
+            return Ok(newUser);
         }
 
-        [HttpGet]
+        [HttpGet("login")]
         public IActionResult LoginUser(User user)
         {
             if (_repository.Login(user))

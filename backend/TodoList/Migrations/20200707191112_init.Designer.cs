@@ -10,7 +10,7 @@ using TodoList.Models;
 namespace TodoList.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20200707130633_init")]
+    [Migration("20200707191112_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,9 @@ namespace TodoList.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDone")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");

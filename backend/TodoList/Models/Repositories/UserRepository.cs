@@ -37,16 +37,18 @@ namespace TodoList.Models.Repositories
                 return false;
             }
         }
-        public void Register(User user)
+        public User Register(User user)
         {
             if (_context.Users.Find(user.ID) != null)
             {
-                //This name already exists! (throw exception)            
+                //This name already exists! (throw exception) 
+                return null;
             }
             else
             {
                 _context.Users.Add(user);
                 _context.SaveChanges();
+                return user;
             }
         }
 
