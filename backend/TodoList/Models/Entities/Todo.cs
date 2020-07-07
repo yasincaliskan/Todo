@@ -13,10 +13,11 @@ namespace TodoList.Entities
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public int UserID { get; set; }
+        public bool IsDone { get; set; }
+
+
         [ForeignKey("UserID")]
+        public int UserID { get; set; }
         public virtual User User { get; set; }
-
-
     }
 }

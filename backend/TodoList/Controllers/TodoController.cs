@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using TodoList.Models;
 using Microsoft.EntityFrameworkCore;
 using TodoList.Entities;
+using TodoList.Models.Repositories;
 
 namespace TodoList.Controllers
 {
@@ -14,26 +15,23 @@ namespace TodoList.Controllers
     [ApiController]
     public class TodoController : ControllerBase
     {
-        private readonly TodoContext _context;
+        private readonly TodoRepository _repository;
 
-        public TodoController(TodoContext context)
+        public TodoController(TodoRepository repository)
         {
-            _context = context;
-
+            _repository = repository;
         }
-
         [HttpGet]
         public IActionResult GetList()
         {
-            var todos = _context.Todos.AsNoTracking().ToList();
-
-            return Ok(todos);
+            var todoList = _repository.GetList();
+            return Ok(todoList);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetTodo(int id)
         {
-            var todo = _context.Todos.Find(id);
+            var todo = _repository.GetOne(id);
 
             return Ok(todo);
         }
@@ -41,14 +39,7 @@ namespace TodoList.Controllers
         [HttpPost]
         public IActionResult Create(Todo todo)
         {
-            var user = _context.Users.Find(todo.UserID);
-            todo.User = user;
-
-            user.TodoList.Add(todo);
-            _context.Todos.Add(todo);
-
-            _context.SaveChanges();
-            return Ok();
+            return Ok(_repository.Create(todo));
         }
     }
 }

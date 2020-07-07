@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using TodoList.Entities;
 using TodoList.Models;
 using Microsoft.EntityFrameworkCore;
+using TodoList.Models.Repositories;
 
 namespace TodoList.Controllers
 {
@@ -15,38 +16,49 @@ namespace TodoList.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly TodoContext _context;
+        private readonly UserRepository _repository;
 
-        public UsersController(TodoContext context)
+        public UsersController(UserRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         [HttpGet]
         public IActionResult GetUsers()
         {
-            var users = _context.Users.AsNoTracking().ToList();
-
-            return Ok(users);
+            var userList = _repository.GetList();
+            return Ok(userList);
         }
 
         [HttpGet("{id}")]
         public User GetUser(int id)
         {
-            var user = _context.Users.Find(id);
+            var user = _repository.GetOne(id);
 
             return user;
         }
 
         [HttpPost]
-        public IActionResult PostUser(User user)
+        public IActionResult RegisterUser(User user)
         {
-            _context.Users.Add(user);
-            _context.SaveChanges();
+            _repository.Register(user);
 
             return Ok();
         }
 
-      
+        [HttpGet]
+        public IActionResult LoginUser(User user)
+        {
+            if (_repository.Login(user))
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
     }
 }
