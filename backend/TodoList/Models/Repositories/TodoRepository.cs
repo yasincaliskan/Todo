@@ -32,7 +32,7 @@ namespace TodoList.Models.Repositories
         public Todo Create(Todo todo)
         {
             var user = _context.Users.Find(todo.UserID);
-            user.TodoList.Add(todo);
+            //user.TodoList.Add(todo);
 
             todo.User = user;
 
