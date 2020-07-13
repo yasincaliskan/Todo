@@ -1,15 +1,15 @@
 import React from 'react';
 import Todo from "./Components/Todo.js";
-import Nav from "./Components/Navigation.js";
+import Nav from "./Components/Nav.js";
 import './App.css';
-import './style.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Nav />
         <Todo />
+        <br></br>
+        <Nav />
 
       </header>
     </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../style.css';
-import { Table } from 'react-bootstrap';
+// import './style.css';
 
 
 function Todo() {
@@ -33,7 +32,7 @@ function Todo() {
   return (
 
     <div>
-      <Table striped bordered hover variant="dark">
+      <table>
         <thead>
           <tr>
             <th>#</th>
@@ -50,13 +49,13 @@ function Todo() {
               <td>{item.id}</td>
               <td>{item.title}</td>
               <td>{item.description}</td>
-              <td>{item.isDone == true ? "Done" : "Not Completed"} </td>
+              <td>{item.isDone === true ? "Done" : "Not Completed"} </td>
             </tr>
           </tbody>
         ))}
 
 
-      </Table>
+      </table>
     </div>
 
   );
