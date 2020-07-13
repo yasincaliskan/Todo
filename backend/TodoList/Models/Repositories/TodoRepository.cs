@@ -43,9 +43,9 @@ namespace TodoList.Models.Repositories
             return todo;
         }
 
-        public Todo Update(Todo todo)
+        public Todo Update(int id, Todo todo)
         {
-            var updatedTodo = _context.Todos.Find(todo.ID);
+            var updatedTodo = _context.Todos.Find(id);
 
             updatedTodo.ID = todo.ID;
             updatedTodo.Title = todo.Title;
@@ -58,11 +58,6 @@ namespace TodoList.Models.Repositories
             return updatedTodo;
         }
 
-        public void MarkDone(int id)
-        {
-            var todo = _context.Todos.Find(id);
-            todo.IsDone = true;
-
-        }
+      
     }
 }
