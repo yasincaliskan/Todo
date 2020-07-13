@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useForm } from "react-hook-form";
-
 
 function Todo() {
 
@@ -16,14 +14,25 @@ function Todo() {
       )
   }, [])
 
-  function isChecked() {
-
+  function isChecked(value, id) {
+ 
+    console.log(value)
+    fetch('https://localhost:44367/api/todo/' + id, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        isDone: value
+      })
+    })
   }
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
 
-  const onSubmit = data => {
+  function onSubmit() {
 
     fetch('https://localhost:44367/api/todo', {
       method: 'POST',
@@ -59,7 +68,9 @@ function Todo() {
                 <td>{item.id}</td>
                 <td>{item.title}</td>
                 <td>{item.description}</td>
-                <td>{item.isDone === true ? <input type="checkbox" checked onChange={isChecked} /> : <input type="checkbox" onChange={isChecked} />}</td>
+                <td>{item.isDone === true ?
+                  <input type="checkbox" checked onChange={e => isChecked(e.target.checked, item.id)} />
+                  : <input type="checkbox" onChange={e => isChecked(e.target.checked, item.id)} />}</td>
               </tr>
             </tbody>
           ))}

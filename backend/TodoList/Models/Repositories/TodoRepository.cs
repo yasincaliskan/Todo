@@ -45,7 +45,7 @@ namespace TodoList.Models.Repositories
 
         public Todo Update(Todo todo)
         {
-            var updatedTodo = _context.Todos.Find(todo);
+            var updatedTodo = _context.Todos.Find(todo.ID);
 
             updatedTodo.ID = todo.ID;
             updatedTodo.Title = todo.Title;
