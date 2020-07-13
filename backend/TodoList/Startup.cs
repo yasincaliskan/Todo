@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TodoList.Models;
 using TodoList.Models.Repositories;
-using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.AspNetCore.Cors;
 using Newtonsoft.Json;
 
 namespace TodoList
@@ -32,8 +32,12 @@ namespace TodoList
                         builder.WithOrigins("http://localhost:3000");
                     });
             });
+            services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder =>
+            {
+                builder.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+            }));
 
-
+            services.AddMvc();
 
 
             services.AddControllers();
@@ -59,7 +63,11 @@ namespace TodoList
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(builder => builder
+                     .AllowAnyOrigin()
+                     .AllowAnyMethod()
+                     .AllowAnyHeader());
+
 
             app.UseAuthorization();
 

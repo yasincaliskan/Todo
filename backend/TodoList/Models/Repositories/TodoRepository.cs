@@ -35,6 +35,7 @@ namespace TodoList.Models.Repositories
             //user.TodoList.Add(todo);
 
             todo.User = user;
+            todo.UserID = 1;
 
             _context.Todos.Add(todo);
             _context.SaveChanges();
