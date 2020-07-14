@@ -15,7 +15,7 @@ function Todo() {
   }, [])
 
   function isChecked(value, id) {
- 
+
     console.log(value)
     fetch('https://localhost:44367/api/todo/' + id, {
       method: 'POST',
