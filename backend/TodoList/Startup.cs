@@ -39,10 +39,8 @@ namespace TodoList
 
             services.AddMvc();
 
-
             services.AddControllers();
             services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
-
 
             services.AddScoped<TodoRepository>();
             services.AddScoped<UserRepository>();
@@ -67,7 +65,6 @@ namespace TodoList
                      .AllowAnyOrigin()
                      .AllowAnyMethod()
                      .AllowAnyHeader());
-
 
             app.UseAuthorization();
 
