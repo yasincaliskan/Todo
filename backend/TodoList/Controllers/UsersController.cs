@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoList.Entities;
 using TodoList.Models;
-using Microsoft.EntityFrameworkCore;
 using TodoList.Models.Repositories;
 
 namespace TodoList.Controllers

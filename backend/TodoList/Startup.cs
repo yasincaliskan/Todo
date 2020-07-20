@@ -8,12 +8,12 @@ using TodoList.Models;
 using TodoList.Models.Repositories;
 using Microsoft.AspNetCore.Cors;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Identity;
 
 namespace TodoList
 {
     public class Startup
     {
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -47,6 +47,8 @@ namespace TodoList
 
             services.AddDbContext<TodoContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

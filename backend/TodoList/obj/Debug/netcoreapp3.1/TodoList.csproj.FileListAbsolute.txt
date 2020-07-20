@@ -97,3 +97,10 @@ C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Mi
 C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\obj\Debug\netcoreapp3.1\TodoList.csproj.CoreCompileInputs.cache
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\obj\Debug\netcoreapp3.1\TodoList.MvcApplicationPartsAssemblyInfo.cache
