@@ -7,7 +7,6 @@ using TodoList.Entities;
 using TodoList.Models;
 using TodoList.Models.Repositories;
 using Xunit;
-using XUnitTestProject.MockData;
 
 namespace XUnitTestProject
 {

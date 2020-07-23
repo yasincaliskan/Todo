@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TodoList.Entities;
+using TodoList.Models.Context;
 
 namespace TodoList.Models.Repositories
 {
@@ -23,7 +24,7 @@ namespace TodoList.Models.Repositories
             return _context.Todos.Where(c => c.IsDone == status).ToList();
         }
 
-        
+
         public Todo GetOne(int id)
         {
             return _context.Todos.Find(id);
@@ -54,10 +55,9 @@ namespace TodoList.Models.Repositories
             updatedTodo.UserID = todo.UserID;
             updatedTodo.User = todo.User;
 
-            _context.SaveChanges();                       
+            _context.SaveChanges();
             return updatedTodo;
         }
 
-      
     }
 }

@@ -9,6 +9,7 @@ using TodoList.Models.Repositories;
 using Microsoft.AspNetCore.Cors;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Identity;
+using TodoList.Models.Context;
 
 namespace TodoList
 {
@@ -48,7 +49,9 @@ namespace TodoList
             services.AddDbContext<TodoContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
 
-            
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +72,7 @@ namespace TodoList
                      .AllowAnyHeader());
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

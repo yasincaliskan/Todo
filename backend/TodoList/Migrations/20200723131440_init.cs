@@ -14,7 +14,9 @@ namespace TodoList.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CreatedTime = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Username = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: false),
+                    Password = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

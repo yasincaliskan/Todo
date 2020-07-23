@@ -102,3 +102,12 @@ C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Mi
 C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\obj\Debug\netcoreapp3.1\TodoList.csproj.CoreCompileInputs.cache
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\obj\Debug\netcoreapp3.1\TodoList.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\obj\Debug\netcoreapp3.1\TodoList.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\TodoList.StaticWebAssets.xml
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\yasin\source\repos\TodoList\backend\TodoList\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TodoList.Entities;
+using TodoList.Models.Context;
 
 namespace TodoList.Models.Repositories
 {
@@ -18,6 +19,7 @@ namespace TodoList.Models.Repositories
         public List<User> GetList()
         {
             return _context.Users.ToList();
+
         }
 
         public User GetOne(int id)
@@ -27,8 +29,8 @@ namespace TodoList.Models.Repositories
 
         public bool Login(User user)
         {
-            var _user = _context.Users.Find(user.Name);
-            if(_user != null)
+            var _user = _context.Users.Find(user.Username);
+            if (_user != null)
             {
                 return true;
             }
@@ -41,7 +43,7 @@ namespace TodoList.Models.Repositories
         {
             if (_context.Users.Find(user.ID) != null)
             {
-                //This name already exists! (throw exception) 
+                //This username already exists! (throw exception) 
                 return null;
             }
             else
@@ -51,7 +53,5 @@ namespace TodoList.Models.Repositories
                 return user;
             }
         }
-
-
     }
 }

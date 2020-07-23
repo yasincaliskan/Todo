@@ -52,7 +52,7 @@ namespace TodoList.Controllers
             return Ok(todo);
         }
 
-      
+
         [HttpPost]
         public IActionResult Create(Todo todo)
         {
@@ -62,7 +62,7 @@ namespace TodoList.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, Todo todo)
         {
-           
+
             return Ok(_repository.Update(id, todo));
         }
     }

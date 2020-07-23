@@ -140,3 +140,9 @@ C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\obj\Debug\netcorea
 C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\obj\Debug\netcoreapp3.1\XUnitTestProject.dll
 C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\obj\Debug\netcoreapp3.1\XUnitTestProject.pdb
 C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\obj\Debug\netcoreapp3.1\XUnitTestProject.genruntimeconfig.cache
+C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\bin\Debug\netcoreapp3.1\TodoList.StaticWebAssets.xml
+C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\yasin\source\repos\TodoList\backend\XUnitTestProject\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
