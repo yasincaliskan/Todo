@@ -15,7 +15,6 @@ namespace TodoList.Entities
         public string Description { get; set; }
         public bool IsDone { get; set; }
 
-
         [ForeignKey("UserID")]
         public int UserID { get; set; }
         public virtual User User { get; set; }

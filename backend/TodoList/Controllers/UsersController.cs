@@ -23,7 +23,7 @@ namespace TodoList.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUsers()
+        public ActionResult GetUsers()
         {
             var userList = _repository.GetList();
             return Ok(userList);
@@ -38,7 +38,7 @@ namespace TodoList.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult RegisterUser(User user)
+        public ActionResult RegisterUser(User user)
         {
             var newUser = _repository.Register(user);
 
@@ -46,7 +46,7 @@ namespace TodoList.Controllers
         }
 
         [HttpGet("login")]
-        public IActionResult LoginUser(User user)
+        public ActionResult LoginUser(User user)
         {
             if (_repository.Login(user))
             {
