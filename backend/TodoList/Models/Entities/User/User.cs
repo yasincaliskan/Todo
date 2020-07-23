@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using TodoList.Models.Entities;
+using TodoList.Models.Entities.User;
 
 namespace TodoList.Entities
 {
@@ -17,7 +18,10 @@ namespace TodoList.Entities
         [Required]
         public string Password { get; set; }
 
-        public virtual ICollection<Todo> TodoList { get; set; }
+        //public Role Role { get; set; }
+        public ICollection<Todo> TodoList { get; set; }
+
+       
 
     }
 }
