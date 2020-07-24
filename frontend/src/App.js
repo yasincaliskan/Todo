@@ -5,6 +5,7 @@ import Register from "./Components/Register.js";
 import Home from "./Components/Home.js";
 import './App.css';
 import './Components/style.css';
+import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (

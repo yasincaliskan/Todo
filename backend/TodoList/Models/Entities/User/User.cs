@@ -21,7 +21,5 @@ namespace TodoList.Entities
         //public Role Role { get; set; }
         public ICollection<Todo> TodoList { get; set; }
 
-       
-
     }
 }

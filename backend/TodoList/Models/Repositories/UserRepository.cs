@@ -43,8 +43,7 @@ namespace TodoList.Models.Repositories
         {
             if (_context.Users.Find(user.ID) != null)
             {
-                //This username already exists! (throw exception) 
-                return null;
+                throw new ArgumentException($"{user.Username} is already taken.");
             }
             else
             {
