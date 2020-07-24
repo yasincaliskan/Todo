@@ -16,7 +16,7 @@ function Home() {
 
     return (
         <div>
-            <img src={todologo} />
+            <img src={todologo} className="Image"/>
             <h2>Welcome to To-Do!</h2>
 
 
